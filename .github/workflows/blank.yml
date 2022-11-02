@@ -26,8 +26,9 @@ jobs:
     - run: mkdir new_folder
     - run: ls -la
     
-  deldir_job:
+  mvfile_job:
     runs-on: ubuntu-latest
     steps:
-    - run: rm new_folder
+    - run: mv file1.txt new_folder
+    - run: cd new_folder
     - run: ls -la
