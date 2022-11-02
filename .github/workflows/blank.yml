@@ -1,5 +1,7 @@
 name: Actions Test
 on: [push]
+env:
+  GLOBAL_VAR: "This is globally available!"
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
@@ -34,3 +36,15 @@ jobs:
     - run: cd new_folder2
     - run: touch secretfile.txt
     - run: ls -la
+
+  env_job:
+    runs-on: ubuntu-latest
+    env:
+      LOCAL_VAR: "This is locally available"
+    steps:
+    - name: Running global variable
+      run: echo $GLOBAL_VAR
+    - name: Running local variable
+      run: echo $LOCAL_VAR
+    - name: Running secret variable
+      run: echo "${{secrets.SECRET_TEXT}}"
