@@ -1,0 +1,9 @@
+name: Actions Test
+on: [push]
+jobs:
+  basic-action:
+  runs-on: ubuntu-latest
+  steps:
+  - run: echo 'Hello World'
+  - run: pwd
+  - run: ls -la
