@@ -7,6 +7,7 @@ jobs:
     - run: echo 'Hello World'
     - run: pwd
     - run: ls -la
+    
   clone_job:
     runs-on: ubuntu-latest
     steps:
@@ -17,3 +18,16 @@ jobs:
     - run: ls -la
     - run: cat file1.txt
     - run: echo "this is new text" >> file1.txt
+    
+  mkdir_job:
+    runs-on: ubuntu-latest
+    steps:
+    - run: pwd
+    - run: mkdir new_folder
+    - run: ls -la
+    
+  deldir_job:
+    runs-on: ubuntu-latest
+    steps:
+    - run: rm new_folder
+    - run: ls -la
