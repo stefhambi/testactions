@@ -29,6 +29,7 @@ jobs:
   mvfile_job:
     runs-on: ubuntu-latest
     steps:
+    - run: ls -la
     - run: mv file1.txt $PWD/new_folder
     - run: cd new_folder
     - run: ls -la
