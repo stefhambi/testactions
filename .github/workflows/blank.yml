@@ -30,6 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: ls -la
-    - run: mv file1.txt $PWD/new_folder
-    - run: cd new_folder
+    - run: mkdir new_folder2
+    - run: cd new_folder2
+    - run: touch secretfile.txt
     - run: ls -la
