@@ -16,4 +16,4 @@ jobs:
     - run: echo '${{ github.repository }}'
     - run: ls -la
     - run: cat file1.txt
-    - run: echo "this is new text" >>
+    - run: echo "this is new text" >> file1.txt
