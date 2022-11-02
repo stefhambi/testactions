@@ -1,9 +1,19 @@
 name: Actions Test
 on: [push]
 jobs:
-  basic-action:
+  hello_world_job:
     runs-on: ubuntu-latest
     steps:
     - run: echo 'Hello World'
     - run: pwd
     - run: ls -la
+  clone_job:
+    runs-on: ubuntu-latest
+    steps:
+    - run: ls -la
+    - name: Checkout
+      uses: actions/checkout@v2.5.0
+    - run: echo '${{ github.repository }}'
+    - run: ls -la
+    - run: cat file1.txt
+    - run: echo "this is new text" >>
