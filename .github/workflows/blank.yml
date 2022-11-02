@@ -25,6 +25,9 @@ jobs:
     - run: pwd
     - run: mkdir new_folder
     - run: ls -la
+    - run: git add .
+    - run: git commit
+    - run: git push
     
   mvfile_job:
     runs-on: ubuntu-latest
